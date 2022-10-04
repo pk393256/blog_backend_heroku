@@ -2,7 +2,12 @@
 // import userModel from "../model/user";
 const Jwt =require('jsonwebtoken');
 const userModel = require("../model/user");
-const {secret_key} = require("../secret")
+
+require('dotenv')
+dotenv.config();
+const secret_key = process.env.SECRET_KEY;
+
+// const {secret_key} = require("../secret")
 // import { secret_key } from "../secret/secret";
 // export userModel
 
