@@ -10,7 +10,7 @@ async function registerUser(req, res) {
             let ifPresent = await userModel.find({email});
         // console.log('ifPresent', ifPresent);
         if (ifPresent.length>0) {
-            res.status(409).send('User already present');
+            res.status(409).send({data:'User already present'});
             console.log('if this runs after send');
         }
         } catch (error) {
