@@ -21,7 +21,7 @@ async function registerUser(req, res) {
             let data = { name, email, password } = req.body;
         let createUser = await userModel.create(data);
         // userModel.save();
-        res.status(200).send(createUser)
+        res.status(200).send({data:"User Registered"})
         } catch (error) {
             console.log('error message 2',error)
         }
